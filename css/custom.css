@@ -1,0 +1,30 @@
+.important {
+  font-weight: bold;
+  color: #f29b4f !important;
+}
+
+.highlight {
+  font-style: italic !important;
+  color: #04b4d3;
+}
+
+.secondary {
+  font-style: italic !important;
+  color: #b8b9ba;
+}
+
+.book-cover {
+  width: 250px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  float: none;
+}

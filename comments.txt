@@ -1,0 +1,21 @@
+unit tests are pretty old, but as all things in software development still
+there are some differences and opinios about how to do them
+  - personal experience 
+  - different environment
+  - Personal preference
+
+there are two different schools of unit testing
+  - london
+    - growing oos guided by tests
+
+  - classic 
+    - kent beck tdd
+    - triangulation
+
+  i pointed here tdd because these schools like about different
+  styles of tests which affect the test / approach /
+  and resulted architecture. and it make sense to understand difference and apply
+  one approach or another even without tdd
+
+The classical TDD style is to use real objects if possible and a double if it's awkward to use the real thing. So a classical TDDer would use a real warehouse and a double for the mail service. The kind of double doesn't really matter that much.
+A mockist TDD practitioner, however, will always use a mock for any object with interesting behavior. In this case for both the warehouse and the mail service.

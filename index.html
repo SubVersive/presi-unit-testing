@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+						<h2>Writing</h2>
+						<h3>maintanable tests</h3>
+				</section>
+				<section>
+					<section>
+						<h3>there are a lot of different tests...</h3>
+						<ul>
+							<li class="fragment fade-up">manual</li>
+							<li class="fragment fade-up">acceptance</li>
+							<li class="fragment fade-up">integration</li>
+							<li class="fragment fade-up">load</li>
+							<li class="fragment fade-up">stress</li>
+							<li class="fragment fade-up">system</li>
+							<li class="fragment fade-up">smoke</li>
+							<li class="fragment fade-up">end-to-end</li>
+						</ul>
+					</section>
+					<section>
+						and of course our lovely
+						<h3 class="fragment fade-up important">unit tests</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>While the technic is old, but ...</h3>
+						<div class="fragment fade-up">
+							<div><img src="./images/different-opinions.jpg" alt="opinions" /></div>
+							<i>there is no single way how to do it</i>
+						</div>
+					</section>
+					<section>
+						<h4>the difference comes from:</h4>
+						<ul>
+							<li class="fragment fade-up">personal experience</li>
+							<li class="fragment fade-up">different projects / environment</li>
+							<li class="fragment fade-up">personal preferences</li>
+						</ul>
+						<p class="fragment fade-up highlight">
+							and they can change over time 
+						</p>
+					</section>
+					<section>
+						<h4>unit tests come together with TDD</h4>
+						<h4 class="fragment fade-up">
+							there are two different
+							<span class="highlight">schools</span>&nbsp;
+							of TDD</h4>
+						<ul>
+							<li class="fragment fade-up">
+								<span>London-school</span>
+								<span class="fragment fade-up secondary">/ interaction-style</span>
+								<span class="fragment fade-up secondary">/ mockist-style</span>
+							</li>
+							<li class="fragment fade-up">
+								<span>Detroit-school</span>
+								<span class="fragment fade-up secondary">/ state-based</span>
+								<span class="fragment fade-up secondary">/ classic-style</span>
+							</li>
+							<div class="fragment fade-up">
+								<img class="book-cover left" src="./images/kent-beck-tdd.jpg" alt="tdd" />
+								<img class="book-cover right" src="./images/goosgt.jpg" alt="goosgt" />
+								<div class="clearfix"></div>
+							</div>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
