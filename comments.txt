@@ -1,3 +1,102 @@
+different tests:
+  - Functional Testing
+    Functional testing is a formal type of testing performed by testers.
+    Functional testing focuses on testing software against design document,
+    Use cases, and requirements document. Functional testing is a black box
+    type of testing and does not require internal working of the software,
+    unlike white box testing.
+
+  - User Acceptance testing (UAT )
+    User Acceptance testing is a must for any project;
+    it is performed by clients/end users of the software.
+    User Acceptance testing allows SMEs (Subject matter experts)
+    from client to test the software with their actual business
+    or real-world scenarios and to check if the software meets
+    their business requirements.
+  
+  - Integration Testing
+    Integration testing is one of the most common and important types
+    of software testing. Once the individual units or components are
+    tested by developers as working then testing team will run tests
+    that will test the connectivity among these units/component or
+    multiple units/components. There are different approaches for
+    Integration testing namely, Top-down integration testing, Bottom-up
+    integration testing and a combination of these two known as Sand witch testing.
+
+   - Load Testing
+    Load testing is a type of non-functional testing; load testing is done
+    to check the behavior of the software under normal and over peak load
+    conditions. Load testing is usually performed using automated testing tools.
+    Load testing intends to find bottlenecks or issues that prevent software
+    from performing as intended at its peak workloads.
+
+  - Performance Testing
+    Performance Testing measures the response time of an application with an
+    expected number of users. The aim of this is to get a baseline and an
+    indication of how an application behaves under normal conditions.
+    Does it meet the required response time?
+
+  - Load Testing
+    Load Testing is measuring the response time when the application is subjected
+    to more than usual number of users. The response time will increase, i.e. the
+    application will be slower under heavy load, but the aim of load testing is
+    to see whether the application can sustain the increased load on the server or
+    will it crash and kill the servers. Load testing is usually started as low
+    numbers and gradually increased over a given period of time until it reaches
+    the desired load on the system and then it ramps down.
+
+  - Stress Testing or Soak Testing
+    Stress Testing or Soak Testing is like load testing but we resume the load
+    on the server for a long period, say 1 hour. The aim of stress testing is
+    to ensure that under a constant load for a long duration, the servers
+    don’t crash, albeit responding slowly. Stress testing starts of the same
+    as load testing, e.g. gradually increasing load on the servers, but once
+    this load is reached, we resume the same load on the server for a given
+    duration and then measure the response times.
+
+  - Break Point
+    If we keep increasing the load on the server, there comes a point when
+    the server cannot handle any more requests and it crashes, most probably
+    starting to give a http error 500 response code. Once this happens, we get
+    an indication of the capacity of the application, i.e. how many users
+    can the application handle.
+
+  - End-to-end Testing
+    End to end testing is performed by the testing team and the focus is to
+    test end to end flows e.g. right from order creation till reporting or order
+    creation till item return etc and checking. End to end testing is usually
+    focused on mimicking real life scenarios and usage. End to end testing
+    involves testing information flow across applications.
+  
+  - System Testing
+    this includes multiple software testing types that will enable to validate
+    the software as a whole (software, hardware, and network) against the
+    requirements for which it was built. Different types of tests (GUI testing,
+    Functional testing, Regression testing, Smoke testing, load testing,
+    stress testing, security testing, stress testing, ad-hoc testing etc.,)
+    are carried out to complete system testing.
+  
+  - Smoke testing
+    is a type of testing that is carried out by software testers to check
+    if the new build provided by the development team is stable enough i.e.,
+    major functionality is working as expected in order to carry out further
+    or detailed testing. Smoke testing is intended to find “show stopper”
+    defects that can prevent testers from testing the application in detail.
+    Smoke testing carried out for a build is also known as build verification test.
+
+  - Regression Testing
+    is a type of software testing that is carried out by software testers
+    as functional regression tests and developers as Unit regression tests.
+    The objective of regression tests is to find defects that got introduced
+    to defect fix(es) or introduction of new feature(s). Regression tests are
+    ideal candidates for automation.
+  
+  - Security Testing:
+    Security Testing is carried out in order to find out how well the system
+    can protect itself from unauthorized access, hacking – cracking, any code
+    damage etc. which deals with the code of application. This type of testing
+    needs sophisticated testing techniques.
+
 unit tests are pretty old, but as all things in software development still
 there are some differences and opinios about how to do them
   - personal experience 
@@ -5,6 +104,8 @@ there are some differences and opinios about how to do them
   - Personal preference
 
 there are two different schools of unit testing
+http://codemanship.co.uk/parlezuml/blog/?postid=987
+
   - london
     - growing oos guided by tests
 
@@ -17,5 +118,58 @@ there are two different schools of unit testing
   and resulted architecture. and it make sense to understand difference and apply
   one approach or another even without tdd
 
-The classical TDD style is to use real objects if possible and a double if it's awkward to use the real thing. So a classical TDDer would use a real warehouse and a double for the mail service. The kind of double doesn't really matter that much.
-A mockist TDD practitioner, however, will always use a mock for any object with interesting behavior. In this case for both the warehouse and the mail service.
+
+  - Classical TDD
+    And that, in a nutshell, is the Classic school of TDD.
+    It's often seen as algorithmic in its emphasis. For anything other than the
+    simplest, most obvious problems, we triangulate through a sequence of test
+    examples and generalise the solution as we go until we've covered just enough
+    test cases to produce the general solution. The OO design tends to grow from a
+    single simple starting point, and classes, responsibilities and collaborations
+    in an end-to-end OO design grow organically through the refactoring process.
+    The classical TDD style is to use real objects if possible and a double if
+    it's awkward to use the real thing. So a classical TDDer would use a real
+    warehouse and a double for the mail service. The kind of double doesn't really
+    matter that much.
+    Bottom-Up TDD approach
+
+  - Mockist TDD
+    The London school of TDD has a different emphasis, focusing on roles,
+    responsibilities and interactions, as opposed to algorithms. It's born out of
+    the furnace of component-based, distributed and service-oriented applications
+    that are especially prevelant in the City of London (if you've got bail-out money
+    to burn, why keep it simple, right?). The design emphasis of "enterprise applications"
+    tends to be message passing as opposed to raw algorithmic computation. Of course,
+    many would argue that this should be the emphasis of OO design, in any style of
+    architecture, which is probably true.
+    A mockist TDD practitioner, however, will always use a mock for any object with
+    interesting behavior. In this case for both the warehouse and the mail service.
+    A very simplified description of this approach to TDD might be:
+    Identify the roles, responsibilities and key interactions/collaborations between
+    roles in an end-to-end implementation of the solution to satisfy a system-level
+    scenario or acceptance test. Implement the code needed in each collaborator,
+    one at a time, faking it's direct collaborators and then work your way down
+    through the "call stack" of interactions until you have a working end-to-end
+    implementation that passes the front-end test.
+    Let's say, for example, that we're building a web application that users
+    sign up for, providing a user name, a password and their email address.
+    We have an acceptance test detailing what happens when the email address is not
+    syntactically valid.
+    End-to-end, it might go something like this:
+
+    User Sign Up Page ->
+      Sign-up Controller.openUserAccount(userName, password, email) ->
+        Email Validator.validateEmail(email)
+
+    We may start by writing a test for the User Sign-Up Page using a mock Sign-up
+    Controller with an expectation set that openUserAccount() will be called with
+    a duff email address, and that the controller specifies that the response of
+    the application should be to re-display the User Sign-Up Page with
+    an input error message.
+    When we've passed that test, we might write a test for Sign-up
+    Controller.openUserAccount() using a mock Email Validator with the expectation
+    that validateEmail() is called with the email addressed passed into openUserAccount()
+    (which we know is duff) and that it will return "false", at which point we check
+    what the controller does with a "false" response.
+    And then we could write a test for the Email Validator that checks that when
+    we call validateEmail() with a duff email address, it returns "false".
