@@ -246,66 +246,166 @@
 				</section>
 				<section>
 					<section>
-						<h3>V-Model</h3>
-						<img src="./images/17-v-model.png" width="600" />
+						<h3>Maslow's pyramid of testing</h3>
+						<img src="./images/18-maslow.png" width="600" />
 					</section>
-					
-				</section>
-				
-				
-				<!--<section>
-					<h3>testing</h3>
-					<h3>unit testing</h3>
-					<h3>js / mocha testing</h3>
-				</section>
-				<section>
 					<section>
-						<h3>there are a lot of different tests...</h3>
+						<h3>Unit tests a great because of:</h3>
 						<ul>
-							<li class="fragment fade-up">manual</li>
-							<li class="fragment fade-up">system</li>
-							<li class="fragment fade-up">smoke</li>
-							<li class="fragment fade-up">regression</li>
-							<li class="fragment fade-up">performance / load / stress</li>
-							<li class="fragment fade-up">black box</li>
-							<li class="fragment fade-up subitem">functional</li>
-							<li class="fragment fade-up subitem">user acceptance</li>
-							<li class="fragment fade-up subitem">end-to-end</li>
-							<li class="fragment fade-up">white box</li>
-							<li class="fragment fade-up subitem">integration</li>
-							<li class="fragment fade-up subitem">security</li>
+							<li>they are cheap</li>
+							<li>they are fast</li>
+							<li>high coverage</li>
+							<li>point to exact error place</li>
+							<li>feedback loop is very short</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Unit tests a weak in:</h3>
+						<ul>
+							<li>integration of components</li>
+							<li>configurations</li>
+							<li>integration with framework</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Integrations tests a great because of:</h3>
+						<ul>
+							<li>checking contracts fullfiling</li>
+							<li>external system integration</li>
+							<li>framework expectations</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Integrations tests a weak in:</h3>
+						<ul>
+							<li>they a slow</li>
+							<li>rely on configuration</li>
+							<li>coupled to frameworks</li>
+							<li>low coverage</li>
+						</ul>
+					</section>
+					<section>
+						<h3>End-to-end tests a great because of:</h3>
+						<ul>
+							<li>simualte real-life use cases</li>
+							<li>all components are integrated</li>
+						</ul>
+					</section>
+					<section>
+						<h3>End-to-end tests a weak in:</h3>
+						<ul>
+							<li>they a REALLY slow</li>
+							<li>they are fragile (always red)</li>
+							<li>find a problem - issue</li>
 						</ul>
 					</section>
 				</section>
 				<section>
-					and of course our lovely
-					<h3 class="fragment fade-up important">unit tests</h3>
+					<section>
+						<h2>Unit tests</h2>
+						<img src="./images/19-at-last.png" width="600" />
+					</section>
+					<section>
+						<h2>key point</h2>
+						<ul>
+							<li class="fragment fade-up">automated</li>
+							<li class="fragment fade-up">written by developers</li>
+							<li class="fragment fade-up">white-box</li>
+							<li class="fragment fade-up">small scope (component)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>F.I.R.S.T</h2>
+						<ul>
+							<li class="fragment fade-up">fast</li>
+							<li class="fragment fade-up">isolates / independent</li>
+							<li class="fragment fade-up">irepeatable</li>
+							<li class="fragment fade-up">self-verifying</li>
+							<li class="fragment fade-up">timely</li>
+						</ul>
+					</section>
+					<section>
+						<h2>3 phases tests ( aka 4 phases)</h2>
+						<ul>
+							<li class="fragment fade-up">arrange</li>
+							<li class="fragment fade-up">act</li>
+							<li class="fragment fade-up">assert</li>
+							<li class="fragment fade-up">teardown (</li>
+						</ul>
+					</section>
+					<section>
+						<h2>BDD style</h2>
+					</section>
+					<section>
+						<h2>Gherkin</h2>
+						<img src="./images/20-gherkin.png" width="600" />
+					</section>
+					<section>
+						<h2>Gherkin</h2>
+						<ul>
+							<li>Domain-Specific language</li>
+							<li>Business readable</li>
+						</ul>
+					</section>
+					<section>
+						<h2>specifications</h2>
+						<img src="./images/21-specs.png" width="600" />
+					</section>
+					<section>
+						<h2>seams</h2>
+						<span class="fragment fade-up">
+							is a place where you can alter behavior in your program without
+							editing in that place. the place where we can inject test double
+						</span>
+					</section>
+					<section>
+						<h2>test doubles</h2>
+						<span class="fragment fade-up">
+							is a generic term for any case where you
+							replace a production object for testing purposes
+						</span>
+					</section>
+					<section>
+						<h2>XUnit Test Patterns (Gerard Meszaros)</h2>
+						<ul>
+							<li class="fragment fade-up">Test Double</li>
+							<li class="fragment fade-up">Dummy</li>
+							<li class="fragment fade-up">Stubs</li>
+							<li class="fragment fade-up">Spies</li>
+							<li class="fragment fade-up">Mocks</li>
+							<li class="fragment fade-up">Fake *</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mocks vs Stubs</h2>
+						<img src="./images/22-mock-vs-stub.jpg" width="600" />
+					</section>
+					<section>
+						<h2>Stubs</h2>
+						<img src="./images/23-stub.png" width="600" />
+					</section>
+					<section>
+						<h2>Mocks</h2>
+						<img src="./images/24-mock.png" width="600" />
+					</section>
 				</section>
 				<section>
 					<section>
-						<h3>While the technic is old, but ...</h3>
+						<h2>going deeper</h2>
+						<img src="./images/25-deeper.jpeg" width="400" />
+					</section>
+					<section>
+						<h3>while the unit-testing is pretty old, but ...</h3>
 						<div class="fragment fade-up">
-							<div><img src="./images/different-opinions.jpg" alt="opinions" /></div>
+							<div><img src="./images/27-oppinions.jpg" alt="opinions" /></div>
 							<i>there is no single way how to do it</i>
 						</div>
 					</section>
 					<section>
-						<h4>the differences come from:</h4>
-						<ul>
-							<li class="fragment fade-up">personal experience</li>
-							<li class="fragment fade-up">different projects / environment</li>
-							<li class="fragment fade-up">personal preferences</li>
-						</ul>
-						<p class="fragment fade-up highlight">
-							and they can vary over time
-						</p>
+						<h2>two schools of TDD</h2>
+						<img src="./images/26-two-schools.jpg" width="400" />
 					</section>
 					<section>
-						<h4>unit tests come together with TDD</h4>
-						<h4 class="fragment fade-up">
-							there are two different
-							<span class="highlight">schools</span>&nbsp;
-							of TDD</h4>
 						<ul>
 							<li class="fragment fade-up">
 								<span>London-school</span>
@@ -318,13 +418,54 @@
 								<span class="fragment fade-up secondary">/ classic-style</span>
 							</li>
 							<div class="fragment fade-up">
-								<img class="book-cover left" src="./images/kent-beck-tdd.jpg" alt="tdd" />
-								<img class="book-cover right" src="./images/goosgt.jpg" alt="goosgt" />
+								<img class="book-cover left" src="./images/28-kent-beck-tdd.jpg" alt="tdd" />
+								<img class="book-cover right" src="./images/29-goosgt.jpg" alt="goosgt" />
 								<div class="clearfix"></div>
 							</div>
 						</ul>
 					</section>
+					<section>
+						<h2>London school</h2>
+						<ul>
+							<li class="fragment fade-up">top-down use cases</li>
+							<li class="fragment fade-up">nice to use when there are collaborators</li>
+							<li class="fragment fade-up">heavelly usage of mocks</li>
+							<li class="fragment fade-up">big coupling to implementation</li>
+							<li class="fragment fade-up">hard to refactor code</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Detroit school</h2>
+						<ul>
+							<li class="fragment fade-up">bottom-up use cases</li>
+							<li class="fragment fade-up">focus on refactoring</li>
+							<li class="fragment fade-up">decouple tests from internals</li>
+							<li class="fragment fade-up">try to avoid mocks</li>
+						</ul>
+					</section>
+					<section>
+						<h2>summary</h2>
+						<ul>
+							<li class="fragment fade-up">high-level components - London</li>
+							<li class="fragment fade-up">many collborations - London</li>
+							<li class="fragment fade-up">internal algorithm - Detroit</li>
+							<li class="fragment fade-up">domain enteties - Detroit</li>
+						</ul>
+					</section>
 				</section>
+				<section>
+					<section>
+						<h2>practices</h2>
+						<img src="./images/30-practices.jpg" width="500" />
+					</section>
+					<section>
+						<h2>practices</h2>
+						<img src="./images/30-practices.jpg" width="500" />
+					</section>
+				</section>
+
+				
+				<!--<section>
 				<section>
 					<h3>classic school</h3>
 					<i class="fragment fade-up">emphasis on a technique called triangulation</i>
