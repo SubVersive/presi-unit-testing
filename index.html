@@ -330,7 +330,7 @@
 							<li class="fragment fade-up">arrange</li>
 							<li class="fragment fade-up">act</li>
 							<li class="fragment fade-up">assert</li>
-							<li class="fragment fade-up">teardown (</li>
+							<li class="fragment fade-up">teardown</li>
 						</ul>
 					</section>
 					<section>
@@ -428,7 +428,7 @@
 						<h2>London school</h2>
 						<ul>
 							<li class="fragment fade-up">top-down use cases</li>
-							<li class="fragment fade-up">nice to use when there are collaborators</li>
+							<li class="fragment fade-up">nice to use when there are many collaborations</li>
 							<li class="fragment fade-up">heavelly usage of mocks</li>
 							<li class="fragment fade-up">big coupling to implementation</li>
 							<li class="fragment fade-up">hard to refactor code</li>
@@ -452,6 +452,17 @@
 							<li class="fragment fade-up">domain enteties - Detroit</li>
 						</ul>
 					</section>
+					<section>
+						<h2>hard to test code</h2>
+						<ul>
+							<li class="fragment fade-up">shared state (singlethons, static)</li>
+							<li class="fragment fade-up">new operator</li>
+							<li class="fragment fade-up">non deterministic code (random / Date)</li>
+							<li class="fragment fade-up">spaghetti code - mixed abstractions</li>
+							<li class="fragment fade-up">too many collaborations</li>
+							<li class="fragment fade-up">framework issues (express middlewares/mongoose)</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
@@ -459,23 +470,78 @@
 						<img src="./images/30-practices.jpg" width="500" />
 					</section>
 					<section>
-						<h2>practices</h2>
-						<img src="./images/30-practices.jpg" width="500" />
+						<h2>write to audience</h2>
+					</section>
+					<section>
+						<h2>single “logical” assert</h2>
+					</section>
+					<section>
+						<h2>assert first style</h2>
+					</section>
+					<section>
+						<h2>don’t mock what you don't own</h2>
+					</section>
+					<section>
+						<h2>one mock per test</h2>
+					</section>
+					<section>
+						<h2>use contexts</h2>
+					</section>
+					<section>
+						<img src="./images/34-code.png" width="700" />
+					</section>
+					<section>
+						<img src="./images/35-test.png" width="700" />
+					</section>
+					<section>
+						<img src="./images/36-output.png" width="600" />
+					</section>
+					<section>
+						<h2>keep your descriptions short</h2>
+					</section>
+					<section>
+						<h2>stubs could be better then mocks</h2>
+					</section>
+					<section>
+						<h2>limit deps of your specs</h2>
+					</section>
+					<section>
+						<h2>try to avoid Guard in tests</h2>
+					</section>
+					<section>
+						<h2>code-coverage</h2>
 					</section>
 				</section>
-
-				
-				<!--<section>
 				<section>
-					<h3>classic school</h3>
-					<i class="fragment fade-up">emphasis on a technique called triangulation</i>
-					<hr class="fragment fade-up" />
-					<div class="left fragment fade-up">
-						Test #1: 1 = I -> return "I"<br />
-						Test #2: 2 = II -> if integer = 1 return "I" else return "II"<br />
-						Test #3: 3 = III -> while(integer > 0) concatenate "I" to result and decrement integer
-					</div>
-				</section>-->
+					<section>
+						<h2>but there are more</h2>
+					</section>
+					<section>
+						<h2>new tools</h2>
+						<ul>
+							<li>AVA</li>
+							<li>JEST</li>
+						</ul>
+					</section>
+					<section>
+						<h2>new kind of testing</h2>
+					</section>
+					<section>
+						<h2>property-based</h2>
+						<img src="./images/31-property-based.png" width="600" />
+					</section>
+					<section>
+						<h2>JEST snapshot testing</h2>
+						<img src="./images/32-snapshot.png" width="600" />
+					</section>
+					<section>
+						<h2>netflix chaos monkey testing</h2>
+						<img src="./images/33-monkey.png" width="400" />
+					</section>
+				</section>
+				<section>
+					<img src="./images/37-qa.jpg" width="700" />
+				</section>
 			</div>
 		</div>
 
